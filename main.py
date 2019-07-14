@@ -8,7 +8,8 @@ import time
 
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
 cookies = {}
-cookies_str = 'pgv_pvi=9906049024; UM_distinctid=16ba10ac40126d-08a948ed81d7ed-3c604504-1fa400-16ba10ac40215f; lang="2|1:0|10:1563106227|4:lang|8:emhfQ04=|f4f81d70ead7f47cd589ccf398e6bc28ad4537cab8b794086498969d5ce934f0"; pgv_si=s5135546368; CNZZDATA3645431=cnzz_eid%3D109612578-1561769735-null%26ntime%3D1563108481; mail="2|1:0|10:1563111966|4:mail|40:d3ZjaDB5ZzNAODk5MDc5LmNvbXwxNTYzMTExOTY2|69a1166aa36faed60b5cc7806b8de47b0e7699230b33fb9e8d47a2c543c3b808"; time="2|1:0|10:1563111966|4:time|16:MTU2MzExMTk2Ng==|ef8f0ee3c107f0b9095423658f9d9b1904a1509d2bdbc004fbf2020420d1c037"'
+#在这里添加cookies
+cookies_str = ''
 cookies_list = cookies_str.split(';')
 for tmp in cookies_list:
     name = tmp.split('=',1)[0]
