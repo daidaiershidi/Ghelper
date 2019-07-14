@@ -14,13 +14,18 @@ for tmp in cookies_list:
     name = tmp.split('=',1)[0]
     value = tmp.split('=',1)[1]
     cookies[name] = value
-##################
+###################
 #获取十分钟邮箱账号##
 ##################
 def apply():
     mail_front = []
     i = 0
     
+    mima = []
+    for i in range(8):
+        mima.append(random.choice('abcdefghijklmnopqrstuvwxyz123456789'))
+    mima = "".join(mima)
+
     apply_url = 'http://mail.bccto.me/applymail'
     for i in range(8):
         mail_front.append(random.choice('abcdefghijklmnopqrstuvwxyz123456789'))
@@ -31,15 +36,31 @@ def apply():
     
     r_apply = requests.post(apply_url,headers=headers, data=apply_data, cookies=cookies)
     assert json.loads(r_apply.content)['success']=='true'
-    return mail
-##################
-#获取邮箱的邮件内容##
-##################
-def get_mail(mail):
+    return mail,mima
+######################
+#是否获取邮箱的邮件内容##
+#####################
+def ifget_mail(mail):
     get_url = 'http://mail.bccto.me/getmail'
     get_data = {'mail':mail}
     r_get = requests.post(get_url, headers=headers, data=get_data, cookies=cookies)
-    print(r_get.content)
+#    print(r_get.content)
+    return json.loads(r_get.content)['mail']
+def find_mail(get_mail_url_last):
+    url = 'http://mail.bccto.me/win/s94h0nbe(a)899079-_-com/' + get_mail_url_last
+    r_find = requests.get(url, headers=headers, cookies=cookies)
+    www = r_find.content.decode().split('号')[1].split('官')[0].split('>')[3].split('<')[0]
+    r_apply = requests.get(www, headers=headers, cookies=cookies)
+#    print(r_apply)
+    return www
+#def 
 if __name__ == '__main__':
-    mail = apply()
-    get_mail(mail)
+    mail,mima = apply()
+    print(mail,mima)
+    if_get_mail = ifget_mail(mail)
+    while(len(if_get_mail)==0):
+        if_get_mail = ifget_mail(mail)
+    find_mail(if_get_mail[0][-2])
+
+#    find_mail('KJBE90Tu3oq3u9fRkEXGVG.eml')
+    
