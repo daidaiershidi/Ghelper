@@ -1,5 +1,6 @@
 # Ghelper
 help to apply Ghelper
+
 1.Click on the shadows in the picture
  
 2.Click on the shadows in the picture
@@ -7,7 +8,9 @@ help to apply Ghelper
 
 3......
 外国人也不用这玩意啊
+
 第一步下载仓库
+
 第二步解压，1点击crx后缀文件
 	如果你的电脑有能安装插件的浏览器（火狐，360，谷歌等），应该会自动打	开，如果没有，右键选择打开方式，在更多应用（还是没有的话，向下滑在此	电脑上查找其他应用）
  
@@ -21,9 +24,6 @@ help to apply Ghelper
 第四步百度：如何定时运行py文件
 
 https://blog.csdn.net/guanmaoning/article/details/80152131
-
-
-
 
 
 贵在不花钱同时能用微屁恩~~
