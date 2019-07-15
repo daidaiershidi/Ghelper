@@ -6,15 +6,19 @@ from requests.cookies import RequestsCookieJar
 import pprint
 import time
 
-headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36'}
-cookies = {}
-#在这里添加cookies
-cookies_str = ''
-cookies_list = cookies_str.split(';')
-for tmp in cookies_list:
-    name = tmp.split('=',1)[0]
-    value = tmp.split('=',1)[1]
-    cookies[name] = value
+headers = {'User-Agent':'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Mobile Safari/537.36'}
+#cookies = {}
+##在这里添加cookies
+#cookies_str = 'pgv_pvi=6699446272; pgv_si=s1430532096; mail="2|1:0|10:1563160766|4:mail|44:cG9lcW5jaWhAbWFpbC5iY2N0by5tZXwxNTYzMTYwNzY2|b799ecb08468b13d581b8b6db9a67c49214352cc4ee6115b91fd659ab3c2c408"; time="2|1:0|10:1563160766|4:time|16:MTU2MzE2MDc2Ng==|190abcb58d35b0de71b59c4d2159a27680b1ecde69216fae2ea4c566dbae7646"'
+#cookies_list = cookies_str.split(';')
+#for tmp in cookies_list:
+#    name = tmp.split('=',1)[0]
+#    value = tmp.split('=',1)[1]
+#    cookies[name] = value
+#pprint.pprint(cookies)
+#print(time.time())
+#response = requests.post('http://mail.bccto.me/applymail', headers=headers)
+#cookies = response.cookies.get_dict()
 def apply():
     mail_front = []
     i = 0
@@ -32,6 +36,7 @@ def apply():
     apply_data = {'mail':mail}
     
     r_apply = requests.post(apply_url,headers=headers, data=apply_data, cookies=cookies)
+    print(r_apply)
     assert json.loads(r_apply.content)['success']=='true'
     return mail,mima
 def ifget_mail(mail):
