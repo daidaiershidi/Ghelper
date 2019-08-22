@@ -1,4 +1,4 @@
-# Ghelper
+# Ghelper(Google Internet Assistant_GHelper)
 help to apply Ghelper
 
 1.Click on the shadows in the picture
