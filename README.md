@@ -1,3 +1,4 @@
+# 由于十分钟临时邮箱的邮箱后缀均不能够注册Ghelper插件了，本项目完蛋。2019.8.30
 # Ghelper(Google Internet Assistant_GHelper)
 help to apply Ghelper
 
