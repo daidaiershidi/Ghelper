@@ -1,4 +1,5 @@
-# 由于十分钟临时邮箱（http://mail.bccto.me/?lang=cn）的邮箱后缀均不能够注册Ghelper插件了，本项目完蛋。2019.8.30
+# 由于十分钟临时邮箱（http://mail.bccto.me/?lang=cn）的邮箱后缀均不能够注册Ghelper插件了，本小项目完蛋。（2019.8.30）
+# main.py相比于main_old.py,添加了自动获取cookies，第三步修改cookies就不需要了。（2019.7.22）
 # Ghelper(Google Internet Assistant_GHelper)
 help to apply Ghelper
 
